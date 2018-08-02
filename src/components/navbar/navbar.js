@@ -36,7 +36,7 @@ class Navbar extends React.Component {
     const { loggedIn, doLogout } = this.props;
     return (
       <header className="header">
-        <h1>The Amazing App</h1>
+        <h1>App of Amazingness</h1>
         <nav>
           {this.renderJSX(loggedIn)}
         </nav>
