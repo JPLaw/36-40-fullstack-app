@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 
 import * as authActions from '../../actions/auth';
 import * as routes from '../../lib/routes';
+import googleBtn from '../../assets/google-btn-light.png';
+import './navbar.scss';
 
 const mapStateToProps = state => ({
   loggedIn: !!state.token,
@@ -21,6 +23,7 @@ class Navbar extends React.Component {
       <li><Link to={routes.ROOT_ROUTE}>Home</Link></li>
       <li><Link to={routes.LOGIN_ROUTE}>Login</Link></li>
       <li><Link to={routes.SIGNUP_ROUTE}>Sign up</Link></li>
+      <li><a href={ this.setGoogleOAuthUrl() }><img src={ googleBtn } /></a></li>
     </ul>;
 
     const JSXLoggedIn = //eslint-disable-line
