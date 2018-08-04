@@ -17,6 +17,17 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class Navbar extends React.Component {
+  setGoogleOAuthUrl = () => {
+    const baseUrl = 'https://accounts.google.com/o/oauth2/v2/auth?';
+    const redirect = `redirect_uri=${API_URL}/oauth/google`;
+    const scope = '&scope=openid%20email%20profile';
+    const clientId = `&client_id=${GOOGLE_OAUTH_ID.trim()}`;
+
+    const prompt = '&prompt=consent%20select_account';
+    const responseType = '&response_type=code';
+    return `${baseUrl}${redirect}${scope}${clientId}${prompt}${responseType}`;
+  }
+
   renderJSX = (loggedIn) => {
     const JSXNotLoggedIn = // eslint-disable-line
     <ul>
