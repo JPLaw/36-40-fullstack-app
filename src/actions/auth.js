@@ -1,6 +1,6 @@
 import superagent from 'superagent';
 import * as routes from '../lib/routes';
-// import { cookieDelete } from '../lib/utils';
+import { cookieDelete } from '../lib/utils';
 
 // These are sync action creators
 

@@ -33,9 +33,9 @@ class Navbar extends React.Component {
     <ul>
       <li><Link to={routes.ROOT_ROUTE}>Home</Link></li>
       <li><Link to={routes.LOGIN_ROUTE}>Login</Link></li>
-      <li><Link to={routes.SIGNUP_ROUTE}>Sign up</Link></li>
+      <li><Link to={routes.SIGNUP_ROUTE}>Sign up</Link></li>   
       <li><a href={ this.setGoogleOAuthUrl() }><img src={ googleBtn } /></a></li>
-    </ul>;
+      </ul>;
 
     const JSXLoggedIn = //eslint-disable-line
     <ul>
