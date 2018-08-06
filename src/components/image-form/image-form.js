@@ -99,7 +99,7 @@ export default class ImageForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.onComplete(this.state)
+    return this.props.onComplete(this.state)
       .then(() => {
         this.setState(this.emptyState);
       })
