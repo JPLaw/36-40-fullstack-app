@@ -6,13 +6,15 @@ export const setImage = profile => ({
   payload: profile,
 });
 
-export const createImage = profile => (store) => {
+export const createImage = () => (store) => {
+  console.log(routes);
   const { token } = store.getState();
 
   return superagent.post(`${API_URL}${routes.IMAGE_ROUTE}`)
     .set('Authorization', `Bearer ${token}`)
     .set('Content-Type', 'application/json')
-    .send(profile)
+    .attach('files', createImage.file)
+    .field('title', createImage.title)
     .then((response) => {
       return store.dispatch(setImage(response.body));
     });
@@ -21,7 +23,7 @@ export const createImage = profile => (store) => {
 export const updateImage = profile => (store) => {
   const { token } = store.getState();
 
-  return superagent.post(`${API_URL}${routes.IMAGE_ROUTE}`)
+  return superagent.put(`${API_URL}${routes.IMAGE_ROUTE}`)
     .set('Authorization', `Bearer ${token}`)
     .set('Content-Type', 'application/json')
     .send(profile) 
