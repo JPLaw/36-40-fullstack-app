@@ -35,14 +35,19 @@ class Landing extends React.Component {
       .catch(console.error);
   }
 
+  render() {
+    const { location } = this.props;
+    return (
+      <div>
+        { this.renderJSX(location.pathname) }
+      </div>
+    );
+  }
+
   renderJSX = (pathname) => {
     const rootJSX = // eslint-disable-line
     <div>
       <h2>Welcome</h2>
-      <ul>
-        <li><Link to="/signup">Sign Up</Link></li>
-        <li><Link to="/login">Login</Link></li>
-      </ul>
     </div>;
 
     const signUpJSX = // eslint-disable-line
@@ -60,6 +65,7 @@ class Landing extends React.Component {
       <p> Don&#39;t have an account? </p>
       <Link to="/signup"> signup </Link>
     </div>;
+
     switch (pathname) {
       case routes.ROOT_ROUTE:
         return rootJSX;
@@ -70,15 +76,6 @@ class Landing extends React.Component {
       default: 
         return null;
     }
-  }
-
-  render() {
-    const { location } = this.props;
-    return (
-      <div>
-        { this.renderJSX(location.pathname) }
-      </div>
-    );
   }
 }
 
