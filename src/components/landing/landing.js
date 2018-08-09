@@ -45,10 +45,21 @@ class Landing extends React.Component {
   }
 
   renderJSX = (pathname) => {
+
+    // const rootJSX = // eslint-disable-line
+    // <div>
+    //   <h2>Welcome</h2>
+    //   <ul>
+    //     <li><Link to="/signup">Sign Up</Link></li>
+    //     <li><Link to="/login">Login</Link></li>
+    //   </ul>
+    // </div>;
+
     const rootJSX = // eslint-disable-line
     <div>
       <h2>Welcome</h2>
     </div>;
+
 
     const signUpJSX = // eslint-disable-line
     <div>
@@ -67,8 +78,8 @@ class Landing extends React.Component {
     </div>;
 
     switch (pathname) {
-      case routes.ROOT_ROUTE:
-        return rootJSX;
+      // case routes.ROOT_ROUTE:
+      //   return rootJSX;
       case routes.SIGNUP_ROUTE:
         return signUpJSX;
       case routes.LOGIN_ROUTE:

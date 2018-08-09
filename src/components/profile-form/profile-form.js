@@ -29,12 +29,6 @@ export default class ProfileForm extends React.Component {
     const buttonText = this.props.profile ? 'Update' : 'Create';
     return (
       <form className="profile-form" onSubmit={ this.handleSubmit }>
-        <label htmlFor="bio">Type your bio here</label>
-        <textarea 
-          name="bio"
-          value={ this.state.bio }
-          onChange={ this.handleChange }
-        />
         <label htmlFor="firstName">First Name</label>
         <input 
           name="firstName"
@@ -45,6 +39,12 @@ export default class ProfileForm extends React.Component {
         <input 
           name="lastName"
           value={ this.state.lastName }
+          onChange={ this.handleChange }
+        />
+        <label htmlFor="bio">Type your bio here</label>
+        <textarea 
+          name="bio"
+          value={ this.state.bio }
           onChange={ this.handleChange }
         />
         <button type="submit">{ buttonText }</button>
