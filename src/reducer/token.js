@@ -11,6 +11,9 @@ export default (state = initialState, { type, payload }) => {
       return payload;
     case 'TOKEN_REMOVE':
       return null;
+
+      return initialState;
+
     default: 
       return state;
   }

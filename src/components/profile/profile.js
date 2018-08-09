@@ -20,14 +20,12 @@ const mapDispatchToProps = dispatch => ({
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-    // this is UI state
     this.state = {
       editing: false,
       profile: props.profile || null,
     };
   }
 
-  // lifecycle hook from React itself
   // TODO: resolve this flash of content
   componentDidMount() {
     this.props.fetchProfile()
@@ -45,7 +43,7 @@ class Profile extends React.Component {
   }
 
   handleUpdate = (profile) => {
-    // TODO: add validation, i.e. catch blocks
+    // TODO: add validation, i.e. catch blocks 
     this.props.updateProfile(profile);
     this.setState({ editing: false });
   }

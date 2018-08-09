@@ -2,6 +2,10 @@ import superagent from 'superagent';
 import * as routes from '../lib/routes';
 import { cookieDelete } from '../lib/utils';
 
+
+const TOKEN_COOKIE_KEY = 'X-401d25-Token';
+
+
 // These are sync action creators
 
 export const setToken = token => ({
@@ -12,6 +16,11 @@ export const setToken = token => ({
 export const removeToken = () => ({
   type: 'TOKEN_REMOVE',
 });
+
+export const logout = () => {
+  cookieDelete(TOKEN_COOKIE_KEY);
+  return removeToken();
+}; 
 
 // These are async action creators
 
@@ -34,7 +43,7 @@ export const userLogin = user => (store) => {
     });
 };
 
-export const logout = () => (store) => {
-  cookieDelete('_token');
-  return store.dispatch(removeToken());
-};
+// export const logout = () => (store) => {
+//   cookieDelete('_token');
+//   return store.dispatch(removeToken());
+// };

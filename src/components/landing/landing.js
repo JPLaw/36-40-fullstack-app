@@ -45,6 +45,7 @@ class Landing extends React.Component {
   }
 
   renderJSX = (pathname) => {
+
     // const rootJSX = // eslint-disable-line
     // <div>
     //   <h2>Welcome</h2>
@@ -53,6 +54,12 @@ class Landing extends React.Component {
     //     <li><Link to="/login">Login</Link></li>
     //   </ul>
     // </div>;
+
+    const rootJSX = // eslint-disable-line
+    <div>
+      <h2>Welcome</h2>
+    </div>;
+
 
     const signUpJSX = // eslint-disable-line
     <div>
