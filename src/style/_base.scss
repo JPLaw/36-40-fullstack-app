@@ -1,0 +1,90 @@
+@import "vars";
+
+.nav {
+  display: inline;
+  margin-left: $pad * 2;
+}
+
+// content
+html, body {
+  position: relative; 
+  font-family: $font-primary;
+  margin-left: 10%;
+}
+head, script, link  { display: none; }
+p { display: inline-block; }
+span,em,strong { display: inline; }
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+body {
+  background: $color-azulverde;
+  font-size: 16px;
+}
+
+#root {
+  min-height: 900px;
+}
+
+blockquote {
+  border-left: $pad solid $color-lightgrey;
+  padding-left: $pad;
+}
+
+@for $i from 6 through 1 {
+  h#{$i} {
+    font-size: 9/($i + 2) * 1em;;
+  }
+}
+
+
+// form
+label {
+  font-size: 1.25em;
+  font-weight: bolder;
+  margin-top: $pad;
+  margin-bottom: $pad;
+}
+
+textarea, input {
+  background: $color-white;
+  border: none;
+  padding: 15px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  transition: 350ms all;
+
+  &:focus {
+    background: $color-ivory;
+    color: $color-lightgrey;
+  }
+
+  &::placeholder {
+    color: $color-lightgrey;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+button,input[type="submit"] {
+  background: $color-bolivia;
+  padding: $pad;
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    background: $color-jacaranda;
+  }
+
+  &:active {
+    background: $color-jacaranda;
+  }
+}
+
+
+// lists
+ul,ol,li { margin-left: $pad * 2; }
+li { display: inline-block; }
+ul li { list-style: none; }
