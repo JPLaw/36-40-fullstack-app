@@ -1,5 +1,5 @@
 ![cf](https://i.imgur.com/7v5ASc8.png) 
-# 401 JS --  Lab 36 - Async Actions with Signup and Login
+# 401 JS --- Async Actions with Signup and Login
 
  
 ##  Documentation  
