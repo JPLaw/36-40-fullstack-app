@@ -14,8 +14,12 @@ class Dashboard extends React.Component {
     const { createFile } = this.props;
     return (
       <div className="dashboard">
+
         <h1>Welcome to the Dashboard</h1>
         <FileForm onComplete={ createFile }/>
+
+        <h1>Welcome to Your Dashboard</h1>
+
       </div>
     );
   }
