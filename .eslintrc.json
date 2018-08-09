@@ -5,7 +5,8 @@
     "cypress/globals": true
   },
   "globals": {
-    "API_URL": true
+    "API_URL": true,
+    "GOOGLE_OAUTH_ID": true
   },
   "parser": "babel-eslint",
   "plugins": ["jest", "react", "cypress"],
