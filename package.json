@@ -15,7 +15,7 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint --fix **/*.js",
     "cypress:open": "cypress open",
-    "start": "npm run build && http-server ./build -a localhost -p 8080 -c-1 &",
+    "start": "npm run build && http-server ./build",
     "pretest": "npm run build && npm run start && wait-on http://localhost:8080",
     "posttest": "pkill -f http-server",
     "heroku-prebuild": "npm uninstall cypress",
