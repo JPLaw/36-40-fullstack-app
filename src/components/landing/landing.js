@@ -60,6 +60,7 @@ class Landing extends React.Component {
       <p> Don&#39;t have an account? </p>
       <Link to="/signup"> signup </Link>
     </div>;
+    
     switch (pathname) {
       case routes.ROOT_ROUTE:
         return rootJSX;
